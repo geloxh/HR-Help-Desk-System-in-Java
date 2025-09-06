@@ -3,8 +3,8 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * Employee class
- * Represents Employee name, department, email, phone number and salary.
+ * == Employee class ==
+ * Handles employee name, department, email, phone number and salary.
  * 
  */
 class Employee {
@@ -60,5 +60,24 @@ class Employee {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+}
+
+/**
+ * == HRHelpDesk class ==
+ * handles the employee list and provides methods for, adding, searching
+ * and removing employees
+ * 
+ */
+class HRHelpDesk {
+    private List<Employee> employeeList;
+
+    public HRHelpDesk() {
+        employeeList = new ArrayList<>(); // Initialize the employee list as an empty ArrayList
+    }
+
+    // Adds an employee to the employee list
+    public void addEmployee(Employee employee) {
+        employeeList.add(employee);
     }
 }
