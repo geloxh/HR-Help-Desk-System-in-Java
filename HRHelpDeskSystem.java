@@ -80,4 +80,32 @@ class HRHelpDesk {
     public void addEmployee(Employee employee) {
         employeeList.add(employee);
     }
-}
+
+    // Prints the list of employees or displays a message if the list is empty
+    public void printEmployees() {
+        if (employeeList.isEmpty()) {
+            System.out.println("No Employees found.");
+        } else {
+            System.out.println("Employee List:");
+            for (Employee employee : employeeList) {
+                System.out.println("Name: " + employee.getName());
+                System.out.println("Department: " + employee.getDepartment());
+                System.out.println("Email: " + employee.getEmail());
+                System.out.println("Phone Number: " + employee.getPhoneNumber());
+                System.out.println("---------------------------");
+            }
+        }
+    }
+
+    // Searches for an employee by name and prints their details if found
+    public void searchEmployee(String name) {
+        boolean found = false;
+        for (Employee employee : employeeList) {
+            if (employee.getName().equalIsIgnoreCase(name)) {
+                System.out.println("Employee Found: ");
+                System.out.println("Name: " + employee.getName());
+                System.out.println("Department: " + employee.getDepartment());
+            }
+        }
+    }
+}   
