@@ -101,10 +101,43 @@ class HRHelpDesk {
     public void searchEmployee(String name) {
         boolean found = false;
         for (Employee employee : employeeList) {
-            if (employee.getName().equalIsIgnoreCase(name)) {
+            if (employee.getName().equalsIgnoreCase(name)) {
                 System.out.println("Employee Found: ");
                 System.out.println("Name: " + employee.getName());
                 System.out.println("Department: " + employee.getDepartment());
+                System.out.println("Email: " + employee.getEmail());
+                System.out.println("Phone Number: " + employee.getPhoneNumber());
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            System.out.println("Employee not found.");
+        }
+    }
+
+    // Removes an employee from the employee list by name
+    public void removeEmployee(String name) {
+        boolean removed = false;
+        for (int i = 0; i < employeeList.size(); i++) {
+            if (employeeList.get(i).getName().equalsIgnoreCase(name)) {
+                employeeList.remove(i);
+                System.out.println("Employee removed successfully.");
+                removed = true;
+                break;
+            }
+        }
+        if (!removed) {
+            System.out.println("Employee not found.");
+        }
+    }
+
+    // Updates the salary of an existing employee
+    public void updateSalary(String name, double newSalary) {
+        boolean updated = false;
+        for (Employee employee : employeeList) {
+            if (employee.getName().equalsIgnoreCase(name)) {
+                
             }
         }
     }
