@@ -89,7 +89,7 @@ public class HRHelpDeskSystem {
                 case 8:
                     System.out.println("========== Exiting HR Help Desk System ==========");
                     scanner.close();
-                    System.exit(5); // Exit the program
+                    System.exit(0); // Exit the program (The standard code is 0).
                     break;
                 default:
                     System.out.println("Invalid choice. Please try again.");
